@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +14,21 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="csscustom.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>r
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="js/popcorn-complete.js"></script>
   </head>
 
-  <body>
+  <body class="row">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -59,13 +60,55 @@
 
     </div><!-- /.container -->
 
+      <section id="pr_video" class="row">
 
+        <div id="div-video-l" class="div-video-both">
+          <video id="video1" class="video" >
+            <source src="video/1.mp4" type="video/mp4">
+          </video>
+
+        </div>
+
+        <div id="div-video-r" class="div-video-both">
+          <video id="video2" class="video" >
+            <source src="video/2.mp4" type="video/mp4">
+          </video>
+
+
+        </div>
+            <div id="nav-control" class="row">
+
+              <div id="NavBtn" >
+                  <button id="restart" class="control-btn" onclick="restart();">[]</button>
+                  <button id="rew" class="control-btn" onclick="skip(-10)">&lt;&lt;</button>
+                  <button id="play" class="control-btn" onclick="vidplay()">&gt;</button>
+                  <button id="fastFwd" class="control-btn" onclick="skip(10)">&gt;&gt;</button>
+                  <button id="mute" class="control-btn" onclick="mute()">sON</button>
+                  <div id="time" class="control-time">
+                    <progress id="progress" value="" min="0" max="100"></progress>
+                  </div>
+                  <div id="progressnum">Heure 0</div>
+                </div>
+
+                <div id="vLen">
+
+                </div>
+
+
+               </div>
+
+            </div>
+
+          </div>
+
+      </section>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+    <script src="js/app-video.js"></script>
   </body>
 </html>

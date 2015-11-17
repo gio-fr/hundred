@@ -1,7 +1,111 @@
+html{
+  width: auto;
+  height: auto;
+}
+
 body {
   padding-top: 50px;
+  width: auto;
+  height: auto;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+#pr_video{
+  display: block;
+  background-color: violet;
+  height: 400px;
+}
+
+.div-video-both{
+  display: inline-block;
+  height: 300px;
+  width: calc(50% - 2px);
+}
+
+.div-video-l{
+  background-color: yellow;
+  /*transform: matrix(1, 0, 0, 1, -93.75, 0);*/
+}
+
+.div-video-r{
+  background-color: blue;
+  /*transform: matrix(1, 0, 0, 1, -93.75, 0);*/
+}
+.video{
+    width: 100%;
+    margin: inherit;
+    padding: inherit;
+}
+
+#video1{
+}
+#video2{
+}
+
+#nav-control{
+  display: block;
+  margin: auto;
+  background-color: rgba(255,255, 255, 0.5);
+  height: 80px;
+  vertical-align: middle;
+  line-height: normal;
+  text-align: center;
+
+}
+#NavBtn{
+  display:  none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  /*background-color: rgba(0,0, 0, 0.8);*/
+  filter: blur(70px);
+  line-height: 80px;
+  background-color: #eee;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.control-btn{
+  width: 50px;
+  height: 50px;
+  margin:2px;
+  border:0px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+
+}
+
+#time {
+  width:50%;
+  background-color: rgba(255,255, 255, 0.5);
+  border:1px solid black;
+  height:60px;
+  margin: 2px;
+  display: inline-block;
+  line-height: 57px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#progress{
+  background-image:url("../img/shaded-green.png");
+  height:90%;
+  width: 0.01%;
+  line-height: 52px;
+  display: inline;
+  vertical-align: middle;
+
+}
+
+#progressnum{
+  display: inline-block;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  background-color: rgba(255, 0, 0, 0.5);
 }
