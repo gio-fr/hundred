@@ -2,7 +2,7 @@ var video = document.getElementById("video1");
 var video2 = document.getElementById("video2");
 var progress = document.getElementById("progress");
 var progressnum = document.getElementById("progressnum");
- var muteBtn = document.getElementById("mute");
+var muteBtn = document.getElementById("mute");
 
 //controleur video
 function vidplay() {
@@ -54,7 +54,7 @@ function mute(){
     var vLength;
     var pgFlag = "";
     };
-    var maxprogress = 66.5938;
+    var maxprogress = vLength;
     var actualprogress = 0;
     var itv = 0;
     if(actualprogress >= maxprogress)
@@ -80,7 +80,7 @@ if (video.canPlayType) {
 
   video.addEventListener("loadedmetadata", function () {
   vLength = video.duration.toFixed(1);
-  document.getElementById("vLen").textContent = vLength;
+  document.getElementById("vLen").textContent = vLength ;
   }, false);
 }
 
