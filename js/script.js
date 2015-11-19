@@ -23,7 +23,7 @@ $(function() {
 		    },
 			stop: function(){
 				coordinate("#btn-drag")
-			},
+			}
 		});
 	})
 
@@ -31,20 +31,22 @@ $(function() {
 	    element = $(element);
 	    var left = element.position().left;
 	    var right = ($(".video-container").width() - left);
-	    var firstVideo = $( '.video-wrapper' ).first();
-	    var secondVideo = $( '.video-wrapper' ).last();
-	    //console.log("Left: " + left);
-	    //console.log("Right: " + right);
-	    firstVideo.width(left);
-	    secondVideo.width(right);
+	    var firstVideo = $(".video-wrapper").first();
+	    var secondVideo = $(".video-wrapper").last();
+	    firstVideo.width(Math.ceil(left));
+	    secondVideo.width(Math.ceil(right));
 	}
 
 	/*$( "#btn-drag" ).delay(3000).animate({left: 0}, 4000);*/
 
-	$('#instructions').delay(3000).animate({
-		top: "200px",
-		color: "red"
-	});
+	$('#instructions').delay(1000).animate({
+		top: "18%",
+		color: "#fff"
+		}, 1800
+	);
+	/*$('#instructions').delay(3000).animate({
+		top: "-100px"
+	}, 1800);
 	/*
 	this.resized = function(h){
 	moduleH = h;

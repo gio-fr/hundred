@@ -4,7 +4,6 @@ html{
 }
 
 body {
-  padding-top: 50px;
   width: auto;
   height: auto;
 }
@@ -26,19 +25,46 @@ body {
 
 #instructions{
   position: relative;
+  text-align: center;
   color: #bbb;
   font-family: "Arial";
   font-size: 24px;
-  text-decoration: uppercase;
+  text-transform: uppercase;
   z-index: 100;
+  word-spacing: 15px;
   top: -100px;
+  left: 50%;
+  -ms-transform:translate(-50%,0%);
+  -webkit-transform:translate(-50%,0%);
+  -moz-transform:translate(-50%,0%);
+  -o-transform:translate(-50%,0%);
+  transform:translate(-50%,0%);
+
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+#instructions p{
+  display: inline-block;
+  margin: 0;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 .video-container{
   position: relative;
-  height: 70vh;
+  height: 100vh;
   width: 100%;
-  overflow: hidden;s
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .video-wrapper {
@@ -60,12 +86,14 @@ body {
 
 .video-wrapper video{
   position: absolute;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .video-wrapper #video1{
   top: 0px;
   left: 50%;
-    -ms-transform:translate(-50%,0%);
+  -ms-transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
   -moz-transform:translate(-50%,0%);
   -o-transform:translate(-50%,0%);
@@ -74,7 +102,7 @@ body {
 
 .video-wrapper #video2{
   left: 50%;
-    -ms-transform:translate(-50%,0%);
+  -ms-transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
   -moz-transform:translate(-50%,0%);
   -o-transform:translate(-50%,0%);
@@ -94,17 +122,15 @@ body {
   margin-top: -50px;
   margin-left: -50px;
   /*
-    -ms-transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   -moz-transform:translate(-50%,-50%);
   -o-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);
-    /*margin-left: -50px;
-    margin-top: -50px;*/
+  transform:translate(-50%,-50%);*/
 }
 
 #nav-control{
-  display: block;
+  display: none;
   margin: auto;
   background-color: rgba(255,255, 255, 0.5);
   height: 80px;
