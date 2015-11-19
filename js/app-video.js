@@ -85,8 +85,8 @@ if (video.canPlayType) {
   video.addEventListener("loadedmetadata", function () {
   cv = video.ontimeupdate;
   var vr = video.readyState;
-   vLength  = video.duration.toFixed(1);
-  document.getElementById("vLen").textContent = vLength ;
+  vLength  = video.duration.toFixed(1);
+  //document.getElementById("vLen").textContent = vLength ;
   //console.log(cv);
 }, false);
 var lastime = vLength - vr;
@@ -97,7 +97,7 @@ var lastime = vLength - vr;
 video.onplay = function checkVideoSync(){
   var time1 = video.currentTime,
       time2 = video2.currentTime;
-  console.log("video",time1, time2, vLength);
+  //console.log("video",time1, time2, vLength);
   if(Math.abs(time1 - time2) > 1){
     var abs = Math.abs(time1 - time2);
     //console.log(abs);

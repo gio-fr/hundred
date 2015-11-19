@@ -5,8 +5,11 @@ $(function() {
 		    axis: "x",
 		    containment: [containmentLeft, 0 , containmentRight, 0],
 		    drag: function(){
-	            coordinates("#btn-drag");
-			}
+		    	coordinate("#btn-drag")
+		    },
+			stop: function(){
+				coordinate("#btn-drag")
+			},
 		});
 
 	$(window).on('resize', function(){
@@ -16,27 +19,29 @@ $(function() {
 		    axis: "x",
 		    containment: [containmentLeft, 0 , containmentRight, 0],
 		    drag: function(){
-	            coordinates("#btn-drag");
-			}
+		    	coordinate("#btn-drag")
+		    },
+			stop: function(){
+				coordinate("#btn-drag")
+			},
 		});
 	})
 
-	var coordinates = function(element) {
-					    element = $(element);
-					    var left = element.position().left;
-					    var right = ($(".video-container").width() - left);
-					    var firstVideo = $( '.video-wrapper' ).first();
-					    var secondVideo = $( '.video-wrapper' ).last();
-					    console.log("Left: " + left);
-					    console.log("Right: " + right);
-					    firstVideo.width(left);
-					     secondVideo.width(right);
-
-					}
+	function coordinate(element) {
+	    element = $(element);
+	    var left = element.position().left;
+	    var right = ($(".video-container").width() - left);
+	    var firstVideo = $( '.video-wrapper' ).first();
+	    var secondVideo = $( '.video-wrapper' ).last();
+	    //console.log("Left: " + left);
+	    //console.log("Right: " + right);
+	    firstVideo.width(left);
+	    secondVideo.width(right);
+	}
 
 	/*$( "#btn-drag" ).delay(3000).animate({left: 0}, 4000);*/
 
-	$('#instructions').animate({
+	$('#instructions').delay(3000).animate({
 		top: "200px",
 		color: "red"
 	});

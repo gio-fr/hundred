@@ -27,8 +27,11 @@ body {
 #instructions{
   position: relative;
   color: #bbb;
-  font-family: Arial;
+  font-family: "Arial";
+  font-size: 24px;
   text-decoration: uppercase;
+  z-index: 100;
+  top: -100px;
 }
 
 .video-container{
@@ -111,11 +114,7 @@ body {
 }
 
 #NavBtn{
-<<<<<<< HEAD
-  /*display:  none;*/
-=======
-  display:  inline-block;
->>>>>>> origin/master
+  display: none;
   height: 100%;
   width: 100%;
   margin: 0;
