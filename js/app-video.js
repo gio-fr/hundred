@@ -3,6 +3,9 @@ var video2 = document.getElementById("video2");
 var progress = document.getElementById("progress");
 var progressnum = document.getElementById("progressnum");
 var muteBtn = document.getElementById("mute");
+var vr = video.readyState;
+var vLength = video.duration.toFixed(1);
+
 
 //controleur video
 function vidplay() {
@@ -51,10 +54,9 @@ function mute(){
     video.readyState = vr;
     video.videoWidth = vw;
     video.currentTime[2] = vc;
-    var vLength;
     var pgFlag = "";
     };
-    var maxprogress = vLength;
+    var maxprogress = video.Length;
     var actualprogress = 0;
     var itv = 0;
     if(actualprogress >= maxprogress)
@@ -65,25 +67,36 @@ function mute(){
    actualprogress +=  video.currentTime;
    var vduration = video.duration;
    var fraction = actualprogress / vduration;
-   var pourcent = Math.ceil(fraction*100);
+   var pourcent = Math.ceil(fraction * 100);
    progress.style.width = pourcent + "%";
+<<<<<<< HEAD
    progressnum.innerHTML = Math.ceil(pourcent*0.24) +"heures";
    if(actualprogress == maxprogress) clearInterval(itv);
    console.log(progressnum);
+=======
+   progressnum.innerHTML = Math.floor(pourcent* 0.24) + "heures";
+   if(actualprogress == maxprogress) clearInterval(itv);
+   //console.log(vLength);
+>>>>>>> origin/master
   };
 
-//verification lecture de la video
+//verification lecture de la video plus affichage temps restant
 if (video.canPlayType) {
-  video.addEventListener("canplay", function () {
-    document.getElementById("NavBtn").style.display = "inline-block";
+  video.addEventListener("video", function () {
+    document.getElementById("NavBtn").style.display = "block";
   }, false);
-
   video.addEventListener("loadedmetadata", function () {
-  vLength = video.duration.toFixed(1);
+  cv = video.ontimeupdate;
+  var vr = video.readyState;
+   vLength  = video.duration.toFixed(1);
   document.getElementById("vLen").textContent = vLength ;
-  }, false);
+  //console.log(cv);
+}, false);
+var lastime = vLength - vr;
+console.log(cv);
 }
 
+// assurer la synchronisation des videos
 video.onplay = function checkVideoSync(){
   var time1 = video.currentTime,
       time2 = video2.currentTime;

@@ -111,7 +111,11 @@ body {
 }
 
 #NavBtn{
+<<<<<<< HEAD
   /*display:  none;*/
+=======
+  display:  inline-block;
+>>>>>>> origin/master
   height: 100%;
   width: 100%;
   margin: 0;
