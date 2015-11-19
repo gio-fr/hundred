@@ -15,6 +15,7 @@ $(function() {
 	$(window).on('resize', function(){
 		var containmentLeft = $(".video-container").position().left;
 		var containmentRight = $(".video-container").position().left + $(".video-container").width();
+		coordinate("#btn-drag");
 	 	$( "#btn-drag" ).draggable({ 
 		    axis: "x",
 		    containment: [containmentLeft, 0 , containmentRight, 0],
