@@ -69,7 +69,7 @@ function mute(){
    var fraction = actualprogress / vduration;
    var pourcent = Math.ceil(fraction * 100);
    progress.style.width = pourcent + "%";
-   progressnum.innerHTML =(pourcent* 0.24) + "heures";
+   progressnum.innerHTML = Math.floor(pourcent* 0.24) + "heures";
    if(actualprogress == maxprogress) clearInterval(itv);
    //console.log(vLength);
   };
@@ -87,7 +87,7 @@ if (video.canPlayType) {
   //console.log(cv);
 }, false);
 var lastime = vLength - vr;
-console.log();
+console.log(cv);
 }
 
 // assurer la synchronisation des videos
