@@ -48,62 +48,69 @@
           </ul>
         </div></.nav-collapse 
       </div>
-    </div>-->
+    </div>-->    
+   <section class="fullpage">
+     <div class="video-container">
 
-    
+      <div id="btn-drag" class="pulse">
+      </div>
 
-        <div class="video-container">
+      <div class="video-wrapper">
+        <video id="video1" autoplay muted>
+          <source src="video/1.mp4" type="video/mp4" />
+        </video>
+      </div><!--
+      
+      --><div class="video-wrapper">
+        <video id="video2" autoplay muted>
+          <source src="video/2.mp4" type="video/mp4" />
+        </video>
+      </div>
 
-          <div id="btn-drag">
+      <div id="instructions">
+        <p>Bougez <span class="interlettrage">le curseur</span></p>
+      </div>
+
+    </div>
+
+    <!-- Barre de contrôle -->
+    <div id="nav-control" class="row">
+
+      <div id="NavBtn" >
+          <button id="restart" class="control-btn" onclick="restart();">[]</button>
+          <button id="rew" class="control-btn" onclick="skip(-10)">&lt;&lt;</button>
+          <button id="play" class="control-btn" onclick="vidplay()">&gt;</button>
+          <button id="fastFwd" class="control-btn" onclick="skip(10)">&gt;&gt;</button>
+          <button id="mute" class="control-btn" onclick="mute()">sON</button>
+          <div id="time" class="control-time">
+            <progress id="progress" value="" min="0" max="100"></progress>
           </div>
+          <div id="progressnum">Heure 0</div>
+        </div>
 
-          <div class="video-wrapper">
-            <video id="video1" autoplay muted>
-              <source src="video/1.mp4" type="video/mp4" />
-            </video>
-          </div><!--
-          
-          --><div class="video-wrapper">
-            <video id="video2" autoplay muted>
-              <source src="video/2.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div id="instructions">
-            <p>Bougez le curseur</p>
-          </div>
+        <div id="vLen">
 
         </div>
 
-        <!-- Barre de contrôle -->
-        <div id="nav-control" class="row">
+     </div>
+  </section> 
 
-          <div id="NavBtn" >
-              <button id="restart" class="control-btn" onclick="restart();">[]</button>
-              <button id="rew" class="control-btn" onclick="skip(-10)">&lt;&lt;</button>
-              <button id="play" class="control-btn" onclick="vidplay()">&gt;</button>
-              <button id="fastFwd" class="control-btn" onclick="skip(10)">&gt;&gt;</button>
-              <button id="mute" class="control-btn" onclick="mute()">sON</button>
-              <div id="time" class="control-time">
-                <progress id="progress" value="" min="0" max="100"></progress>
-              </div>
-              <div id="progressnum">Heure 0</div>
-            </div>
+  <section class="fullpage">
+    <div class="container">
+      Tamere
+    </div>
+  </section>   
 
-            <div id="vLen">
-
-            </div>
-
-           </div>   
-
-      </section>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
     <script src="js/popcorn-complete.js"></script>

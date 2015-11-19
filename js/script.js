@@ -43,11 +43,23 @@ $(function() {
 	$('#instructions').delay(1000).animate({
 		top: "18%",
 		color: "#fff"
-		}, 1800
+		}, 800
 	);
-	/*$('#instructions').delay(3000).animate({
+	$('#instructions').delay(3000).animate({
 		top: "-100px"
-	}, 1800);
+	}, 800);
+
+	/*function glow(){
+		$("#btn-glow").delay(1500).css({
+			opacity: 0.5,
+			scale: 1.2
+		}, 300);
+		/*$("#btn-glow").css({
+			opacity: 0
+		}, 300);
+	}
+
+	glow();
 	/*
 	this.resized = function(h){
 	moduleH = h;

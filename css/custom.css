@@ -23,6 +23,11 @@ body {
   text-align: center;
 }
 
+.fullpage{
+  min-height: 100vh;
+  width: 100%;
+}
+
 #instructions{
   position: relative;
   text-align: center;
@@ -31,7 +36,7 @@ body {
   font-size: 24px;
   text-transform: uppercase;
   z-index: 100;
-  word-spacing: 15px;
+  word-spacing: 25px;
   top: -100px;
   left: 50%;
   -ms-transform:translate(-50%,0%);
@@ -57,6 +62,10 @@ body {
   -o-user-select: none;
   user-select: none;
   cursor: default;
+}
+
+#instructions p .interlettrage{
+  letter-spacing: 2px;
 }
 
 .video-container{
@@ -113,7 +122,8 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: pink;
+  background-color: #000;
+  border: 1px dotted white;
   cursor: pointer;
   position: absolute;
   z-index: 10;
@@ -121,13 +131,20 @@ body {
   left: 50%;
   margin-top: -50px;
   margin-left: -50px;
-  /*
-  -ms-transform:translate(-50%,-50%);
-  -webkit-transform:translate(-50%,-50%);
-  -moz-transform:translate(-50%,-50%);
-  -o-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);*/
 }
+
+.pulse{
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+  -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
+@-moz-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
+@-ms-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
+@keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 
 #nav-control{
   display: none;
@@ -144,7 +161,6 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  /*background-color: rgba(0,0, 0, 0.8);*/
   filter: blur(70px);
   line-height: 80px;
   background-color: #eee;
