@@ -40,6 +40,9 @@ h2{
   min-height: 100vh;
   width: 100%;
 }
+.relative{
+  position: relative;
+}
 
 /***************************************************
     - Loading Screen
@@ -198,10 +201,8 @@ h2{
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 <<<<<<< Updated upstream
 @keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
-*/
-=======
 @keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}*/
->>>>>>> Stashed changes
+
 
 #nav-control{
   display: block;
