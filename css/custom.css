@@ -1,3 +1,15 @@
+/***************************************************
+    - racourci code syntac cut past
+***************************************************/
+
+/*  animation: <name> <duration> <timing-function> <delay> <iteration-count> <direction> <fill-mode>;*/
+/*
+	-webkit-
+	-moz-
+	-ms-
+	-o-
+*/
+
 html{
   width: auto;
   height: auto;
@@ -50,11 +62,48 @@ h2{
 
 #loading-screen{
   /*display: none;*/
-  background-image: url(../img/loading-background.jpg);
+  background-image: url(../img/loading-background.jpg) ;
   background-color: rgba(0, 0, 0, 0.52);
   background-size: cover;
+  background-position: 50% 50%;
+  background-origin: 50% 50%;
+  padding-top: 5%;
+
+
 }
 
+#img-title{
+  margin-bottom: 35px;
+}
+
+#pr-img-animate{
+  display: inline-block;
+  text-align: center;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#img-animate{
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-ms-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+display: inline-block;
+width: 75%;
+}
+#img-animate svg{
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-ms-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+display: block;
+height: 50%;
+}
 /***************************************************
     - Slider Video
 ***************************************************/
