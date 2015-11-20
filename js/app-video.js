@@ -41,7 +41,7 @@ function mute(){
       muteBtn.textContent = "SON";
     } else {
       video.muted = true;
-      muteBtn.textContent = "MUTE";
+      muteBtn.textContent = "OFF";
     }
   }
 
