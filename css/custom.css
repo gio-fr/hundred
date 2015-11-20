@@ -177,7 +177,7 @@ h2{
   -webkit-transform:translate(-50%,-50%);
   -moz-transform:translate(-50%,-50%);
   -o-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);*/
+  transform:translate(-50%,-50%);
 }
 
 .pulse{
@@ -193,6 +193,7 @@ h2{
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 */
+
 #nav-control{
   display: block;
   position: absolute;
@@ -229,6 +230,7 @@ h2{
   display: none;
   outline: none;
 }
+
 #play{
   display:block;
   border-radius: 50%;
@@ -236,6 +238,7 @@ h2{
   vertical-align: middle;
   text-align: center;
 }
+
 #mute{
   display: inline-block;
   float: right;
