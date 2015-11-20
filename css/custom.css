@@ -6,6 +6,7 @@ html{
 body {
   width: auto;
   height: auto;
+  font-family: 'Muli', sans-serif;
 }
 .starter-template {
   padding: 40px 15px;
@@ -17,7 +18,11 @@ body {
 ***************************************************/
 
 h2{
-  text-align: center;
+  text-align: left;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ff0062;
+  display: inline-block;
+  font-size: 27px;
 }
 
 .container{
@@ -41,7 +46,10 @@ h2{
 ***************************************************/
 
 #loading-screen{
-  
+  /*display: none;*/
+  background-image: url(../img/loading-background.jpg);
+  background-color: rgba(0, 0, 0, 0.52);
+  background-size: cover;
 }
 
 /***************************************************
@@ -52,7 +60,6 @@ h2{
   position: relative;
   text-align: center;
   color: #bbb;
-  font-family: "Arial";
   font-size: 24px;
   text-transform: uppercase;
   z-index: 100;
@@ -105,12 +112,15 @@ h2{
 .video-wrapper:nth-of-type(2),
 .video-wrapper:nth-of-type(3){
   width: 50%;
+  border-right: 2px solid white;
 }
 
 .video-wrapper:nth-of-type(3){
   top: 0px;
   right: 0px;
   z-index: -3;
+  border-left: 2px solid white;
+  border-right: 0px;
 }
 
 .video-wrapper video{
@@ -142,8 +152,8 @@ h2{
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #000;
-  border: 1px dotted white;
+  background-color: transparent;
+  border: 4px solid white;
   cursor: pointer;
   position: absolute;
   z-index: 10;
@@ -152,7 +162,7 @@ h2{
   margin-top: -50px;
   margin-left: -50px;
 }
-
+/*
 .pulse{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
   -webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -165,7 +175,7 @@ h2{
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 @keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
-
+*/
 #nav-control{
   display: none;
   margin: auto;
@@ -249,18 +259,19 @@ img{
 ***************************************************/
 
 footer{
-  padding: 40px 0;
+  height: 50px;
   background-color: #212121;
 }
 
 footer p{
+  display: inline-block;
   text-align: center;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 12px;
 }
 
 footer p:nth-of-type(2){
-  color: #f5f5f5;
+  
 }
 
 /***************************************************
