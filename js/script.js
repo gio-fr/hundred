@@ -38,8 +38,6 @@ $(function() {
 	    secondVideo.width(Math.ceil(right));
 	}
 
-	/*$( "#btn-drag" ).delay(3000).animate({left: 0}, 4000);*/
-
 	$('#instructions').delay(1000).animate({
 		top: "18%",
 		color: "#fff"
@@ -49,41 +47,21 @@ $(function() {
 		top: "-100px"
 	}, 800);
 
-	/*function glow(){
-		$("#btn-glow").delay(1500).css({
-			opacity: 0.5,
-			scale: 1.2
-		}, 300);
-		/*$("#btn-glow").css({
-			opacity: 0
-		}, 300);
-	}
-
-	glow();
-	/*
-	this.resized = function(h){
-	moduleH = h;
-	//Set video size
-	videoW = BeoGlobal.sw;
-	videoH = videoW / (16/9);
-	if(!BeoGlobal.isTouch){
-		if(_videoH < BeoGlobal.reliableSh){
-			videoH = BeoGlobal.reliableSh;
-			videoW = videoH * 16/9;
-		}
-	}
-
-	videoA.style.width = videoB.style.width = _videoW + "px";
-	videoA.style.height = videoB.style.height = _videoH + "px";
-	//Set video wrappers size
-	videoWrapA.style.height = _videoWrapB.style.height = Math.min(BeoGlobal.reliableSh, videoH) + "px";
-	videoWrapB.style.width = BeoGlobal.sw + "px";
-	if(BeoGlobal.isTouch) 
-		videoWrapA.style.width = BeoGlobal.sw + "px";
-	if(BeoGlobal.isTouch) 
-		me.style.height = "auto";
-	else
-		me.style.height = BeoGlobal._reliableSh + "px";
-	}
-	*/
 });
+
+$(".photo-miniature").click(function(){
+	var imageCliquee = $(this).find("img").attr("src");
+	var imageBig = $(".photo-big").find("img").attr("src");
+	var temp = $(this).find("img").attr("src");
+
+	$(this).find("img").attr("src", imageBig);
+	$(".photo-big").find("img").attr("src", temp);
+});
+
+$("#mentions-legales-link").click(function(){
+	$(".mentions-legales").fadeIn();
+})
+
+$(".close").click(function(){
+	$(".mentions-legales").fadeOut();
+})

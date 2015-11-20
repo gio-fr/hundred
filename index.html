@@ -11,7 +11,7 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
@@ -28,6 +28,21 @@
   </head>
 
   <body>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div id="loading-screen" class="fullpage">
+      <div class="container">
+        <img src="" alt="">
+      </div>
+    </div>
 
     <!--<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -48,7 +63,10 @@
           </ul>
         </div></.nav-collapse 
       </div>
-    </div>-->    
+    </div>--> 
+
+    <!-- Section Vidéo Reveal -->
+
    <section class="fullpage">
      <div class="video-container">
 
@@ -95,11 +113,71 @@
      </div>
   </section> 
 
+  <!-- Section Slider Photos -->
   <section class="fullpage">
     <div class="container">
-      Tamere
+      <h2>Slider Images campagne</h2>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+          <div class="photo-miniature"><img src="img/1.jpg"></div>
+          <div class="photo-miniature"><img src="img/2.jpg"></div>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 photo-big"><img src="img/3.jpg"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-md-4 col-lg-4 photo-miniature"><img src="img/4.jpg"></div>
+        <div class="col-sm-4 col-md-4 col-lg-4 photo-miniature"><img src="img/5.jpg"></div>
+        <div class="col-sm-4 col-md-4 col-lg-4 photo-miniature"><img src="img/6.jpg"></div>
+      </div>
     </div>
   </section>   
+
+  <!-- Section Histoire des jumeaux -->
+  <section class="fullpage">
+    <div class="container">
+      <h2>L'histoire des jumeaux</h2>
+    </div>
+  </section> 
+
+  <!-- Section Réseaux Sociaux -->
+  <section class="fullpage">
+    <div class="container">
+      <h2>Réseaux sociaux</h2>
+      <div class="row">
+        <div class="col-xs-5 col-xs-offset-1 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <div class="fb-page" data-href="https://www.facebook.com/happn.fr/" data-width="500" data-height="700" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/happn.fr/"><a href="https://www.facebook.com/happn.fr/">Happn</a></blockquote></div></div>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+          <a class="twitter-timeline" href="https://twitter.com/happn_app" data-widget-id="667631437366063105">Tweets de @happn_app</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p id="mentions-legales-link" class="col-sm-6 col-md-6 col-md-6">Mentions Légales</p>
+      <p class="col-sm-6 col-md-6 col-md-6">Copyright Hundred Agency - 2015</p>
+    </div>
+  </footer>
+
+  <!-- Popin Mentions Légales -->
+  <div class="mentions-legales fullpage">
+    <div class="container">
+      <span class="close">X</span>
+      <h2>Mentions Légales</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna turpis, posuere et metus at, facilisis dignissim metus. Quisque id odio aliquam, gravida dui eget, finibus nibh. Aenean lobortis commodo euismod. Morbi vel lorem a magna semper dignissim vehicula porttitor lorem. Vivamus ut porta lacus, in ullamcorper quam. Duis iaculis tortor vel augue vulputate, ac egestas est venenatis. Donec efficitur, quam vitae gravida sollicitudin, urna mauris posuere metus, ac posuere ante massa quis ligula.
+      </p>
+      <p>
+        Aenean ac condimentum enim, nec fermentum metus. Duis ac ipsum aliquam, finibus velit eget, vehicula urna. Nunc hendrerit vestibulum lacinia. Integer tortor elit, pellentesque id imperdiet eget, semper sed tortor. In enim nibh, tincidunt vel orci at, faucibus aliquam ipsum. Nulla pellentesque lacus ut ante sollicitudin tincidunt. Nunc ornare tellus non faucibus eleifend.</p>
+      <p>
+        Vivamus in massa in metus placerat laoreet. Duis ultricies orci id ex lobortis viverra. In sagittis dui non massa fermentum accumsan. Nullam condimentum diam ipsum, sed porttitor ex feugiat a. Cras in mauris nibh. Duis placerat porttitor vulputate. Nullam quis aliquam erat.
+      </p>
+    </div>
+  </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
