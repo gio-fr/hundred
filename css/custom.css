@@ -177,8 +177,13 @@ h2{
   -webkit-transform:translate(-50%,-50%);
   -moz-transform:translate(-50%,-50%);
   -o-transform:translate(-50%,-50%);
+<<<<<<< Updated upstream
   transform:translate(-50%,-50%);
 }
+=======
+  transform:translate(-50%,-50%);*/
+/*}
+>>>>>>> Stashed changes
 
 .pulse{
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
@@ -191,8 +196,12 @@ h2{
 @-webkit-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 @-moz-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 @-ms-keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
+<<<<<<< Updated upstream
 @keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}
 */
+=======
+@keyframes pulse {to {box-shadow: 0 0 0 40px rgba(255, 255, 255, 0);}}*/
+>>>>>>> Stashed changes
 
 #nav-control{
   display: block;
