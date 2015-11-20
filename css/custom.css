@@ -183,12 +183,6 @@ body {
   margin: 2px;
   background-color: rgba(0,0,0, 0.0);
   line-height: 2.4em;
-  /*background-color: #eee;*/
-
-  margin: 0;
-  filter: blur(70px);
-  line-height: 80px;
-  background-color: #eee;
   transition: opacity 0.3s ease-in-out;
   text-align: center;
 }
@@ -206,7 +200,7 @@ body {
   outline: none;
 }
 #play{
-  display: inline-block;
+  display:block;
   border-radius: 50%;
   margin:35% auto 0;
   vertical-align: middle;
@@ -223,7 +217,7 @@ body {
   background-color: rgba(255,255, 255, 0.5);
   border:1px solid black;
   height:90%;
-  display: inline-block;
+  display: none;
   line-height: 1.9;
   vertical-align: middle;
   text-align: left;
