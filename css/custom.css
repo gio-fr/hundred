@@ -59,65 +59,153 @@ h2{
 /***************************************************
     - Loading Screen
 ***************************************************/
+.display-loading-screen{
+  -webkit-transition: all 2.5s ;
+  -moz-transition: all 2.5s ;
+  -ms-transition: all 2.5s ;
+  -o-transition: all 2.5s ;
+  transition: all 2.5s ;
+  display: none !important;
+}
 
 #loading-screen{
-  /*display: none;*/
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 01px;
+  height: 101vh;
+  display: block;
+  z-index: 13;
   background-image: url(../img/loading-background.jpg) ;
+  background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.52);
   background-size: cover;
   background-position: 50% 50%;
-  background-origin: 50% 50%;
-  padding-top: 5%;
+  background-origin: content-box;
 
-
+  -webkit-animation: welcome 10s ease-in-out 1s 1 normal forwards;
+  -moz-animation: welcome 8s ease-in-out 1s 1 normal forwards;
+  -ms-animation: welcome 8s ease-in-out 1s 1 normal forwards;
+  -o-animation: welcome 10s ease-in-out 1s 1 normal forwards;
+  animation: welcome 10s ease-in-out 1s 1 normal forwards;
 }
 
-#img-title{
-  margin-bottom: 35px;
+  @keyframes welcome{
+  0%{
+    z-index: 12;
+  }
+
+  30%{
+    position: absolute;
+
+  }
+
+
+  50%{
+    transition:all 9.9s ease-in-out;
+    z-index: 12;
+    height: 101vh;
+
+  }
+    80%{
+      transition:all 9.9s ease-in-out;
+      opacity: 1;
+
+    }
+
+
+
+
+  100%{
+    transition: 12.5s ease-in-out;
+    display: inline-block;
+    height: 0vh;
+    opacity: 0;
+  }
+}
+#loading-container{
+  position: absolute;
+  height: 100%;
 }
 
-#pr-img-animate{
-  display: inline-block;
+#pr-img-title{
   text-align: center;
+  display: block;
+  padding-top: 5vh;
+  vertical-align: middle;
+
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
 
-  transform-origin: 50% 50%;-webkit-animation:  drag 2s ease-in-out 1s 1 normal both;
-  -moz-animation:  drag 2.6s ease-in-out 3s 1 normal both;
-  -ms-animation:  drag 2.6s ease-in-out 3s 1 normal both;
-  -o-animation:  drag 2.6s ease-in-out 3s 1 normal both;
-  animation:  drag 2.6s ease-in-out 3s 1 normal both;
+#img-title{
+  display: inline-block;
+  width: 85vh;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+#pr-img-animate{
+  display: block;
+  text-align: center;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  -webkit-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -moz-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -ms-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -o-animation:  drag 4s ease-in-out 2s 1 normal both;
+  animation:  drag 4s ease-in-out 2s 1 normal both;
 
 }
 
 @keyframes drag{
 	0%{
     transition: 1.5s ease-in-out;
-    margin-left: initiale;
+    margin-left: initial;
 	}
 
 	30%{
     transition: 1.5 s ease-in-out;
-    margin-left: 5%;
+    margin-left: 41%;
 	}
 
 	60%{
     transition: 1.5s ease-in-out;
-    margin-left: 65%;
+    margin-left: -60%;
+	}
+
+	70%{
+    transition: 2.9s ease-in-out;
+    margin-left: 32%;
 	}
 
 	80%{
     transition: 1.9s ease-in-out;
-    margin-left: 0.2%;
+    margin-left: -23%;
 	}
+  	90%{
+      transition: 1.9s ease-in-out;
+      margin-left: 5%;
+  	}
 
 	100%{
     transition: 2.5s ease-in-out;
     margin-left: initiale;
 	}
 }
+
 #img-animate{
 -webkit-transform-origin: 50% 50%;
 -moz-transform-origin: 50% 50%;
@@ -125,7 +213,9 @@ h2{
 -o-transform-origin: 50% 50%;
 transform-origin: 50% 50%;
 display: inline-block;
-width: 75%;
+height: auto;
+min-width: 80px;
+height: 50vh;
 }
 
 /***************************************************

@@ -6,6 +6,26 @@ var muteBtn = document.getElementById("mute");
 var vr = video.readyState;
 var vLength = video.duration.toFixed(1);
 
+//autoplay a la fin de l"annimation
+window.onload =function whichTransitionEvent(){
+  var l = document.getElementById("loading-screen");
+
+  console.log(l);
+    $("#loading-screen").one("animationend webkitAnimationEnd oanimationend msAnimationEnd",
+     function(e){
+       function displayB(){
+         document.getElementById("loading-screen").className ="display-loading-screen";
+       }
+       setTimeout(displayB, 5000);
+
+       function retard(){
+         (video).play();
+         (video2).play();
+       }
+       setTimeout(retard, 4000);
+     }
+   );
+};
 
 //controleur video
 function vidplay() {
