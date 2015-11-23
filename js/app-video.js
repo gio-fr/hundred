@@ -8,13 +8,13 @@ var vLength = video.duration.toFixed(1);
 
 //autoplay a la fin de l"annimation
 window.onload =function whichTransitionEvent(){
-  var l = document.getElementById("loading-screen");
+  var l = document.getElementById("background-image");
 
   console.log(l);
-    $("#loading-screen").one("animationend webkitAnimationEnd oanimationend msAnimationEnd",
+    $("#background-image").one("animationend webkitAnimationEnd oanimationend msAnimationEnd",
      function(e){
        function displayB(){
-         document.getElementById("loading-screen").className ="display-loading-screen";
+         document.getElementById("background-image").className ="display-loading-screen";
        }
        setTimeout(displayB, 5000);
 

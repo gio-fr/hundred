@@ -10,9 +10,12 @@
 	-o-
 */
 
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300,700);
+
 html{
   width: auto;
   height: auto;
+  max-width: 100%;
 }
 
 body {
@@ -51,9 +54,11 @@ h2{
 .fullpage{
   min-height: 100vh;
   width: 100%;
+  z-index: 0;
 }
 .relative{
   position: relative;
+  display: inline-block;
 }
 
 /***************************************************
@@ -67,25 +72,49 @@ h2{
   transition: all 2.5s ;
   display: none !important;
 }
+#background-image::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
 
-#loading-screen{
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  min-height: 01px;
-  height: 101vh;
   display: block;
-  z-index: 13;
-  background-image: url(../img/loading-background.jpg) ;
+  background-image: url(../img/loading-background.jpg);
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.52);
   background-size: cover;
   background-position: 50% 50%;
   background-origin: content-box;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+
+  -webkit-filter: brightness(40%);
+  -moz-filter: brightness(40%);
+  -o-filter: brightness(40%);
+  -ms-filter: brightness(40%);
+  filter: brightness(40%);
+}
+#background-image{
+  position: relative;
+  display: block;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  height: 101vh;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 
   -webkit-animation: welcome 10s ease-in-out 1s 1 normal forwards;
-  -moz-animation: welcome 8s ease-in-out 1s 1 normal forwards;
-  -ms-animation: welcome 8s ease-in-out 1s 1 normal forwards;
+  -moz-animation: welcome 10s ease-in-out 1s 1 normal forwards;
+  -ms-animation: welcome 10s ease-in-out 1s 1 normal forwards;
   -o-animation: welcome 10s ease-in-out 1s 1 normal forwards;
   animation: welcome 10s ease-in-out 1s 1 normal forwards;
 }
@@ -95,13 +124,8 @@ h2{
     z-index: 12;
   }
 
-  30%{
-    position: absolute;
 
-  }
-
-
-  50%{
+  70%{
     transition:all 9.9s ease-in-out;
     z-index: 12;
     height: 101vh;
@@ -112,27 +136,35 @@ h2{
       opacity: 1;
 
     }
+    95%{
+    opacity: 0;
 
-
-
+    }
 
   100%{
     transition: 12.5s ease-in-out;
     display: inline-block;
     height: 0vh;
-    opacity: 0;
+    z-index: -2;
+
   }
 }
-#loading-container{
-  position: absolute;
-  height: 100%;
+
+.background-mage::after{
+  filter: brightness(initial);
+  filter: brightness(initial);
+  -webkit-filter: brightness(initial);
+  -moz-filter: brightness(initial);
+  -o-filter: brightness(initial);
+  -ms-filter: brightness(initial);
 }
 
-#pr-img-title{
-  text-align: center;
-  display: block;
-  padding-top: 5vh;
-  vertical-align: middle;
+#loading-screen{
+  width: 100%;
+  min-height: 01px;
+  height: 100%;
+  display: inline-block;
+  position: relative;
 
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
@@ -141,9 +173,57 @@ h2{
   transform-origin: 50% 50%;
 }
 
+
+#loading-container{
+  height: 100%;
+  text-align: center;
+  filter: initial;
+  -webkit-filter: initial;
+  -moz-filter: initial;
+  -o-filter: initial;
+  -ms-filter: initial;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+#loading-container p{
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  height: 20vh;
+  font-size: 7vh;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+}
+
+#pr-img-title{
+  text-align: center;
+  display: inline-block;
+  padding-top: 5vh;
+  vertical-align: middle;
+
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+
+  margin: auto;
+  width: 100%;
+  float: inherit;
+}
+
 #img-title{
   display: inline-block;
-  : 85vh;
+  width: auto;
+  height: 10vh;
+  max-height: 174px;
+  max-width: 90%;
 
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
@@ -155,77 +235,76 @@ h2{
 #pr-img-animate{
   display: block;
   text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  padding: 0%;
+  width: 100%;
+  height: 60vh;
 
   -webkit-transform-origin: 50% 50%;
   -moz-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   -o-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-
-
 }
 
 @keyframes drag{
 	0%{
-    transition: 1.5s ease-in-out;
+    transition: cubic-bezier(0.68, -0.55, 0.27, 1.55);
     margin-left: initial;
 	}
 
 	30%{
-    transition: 1.5 s ease-in-out;
     margin-left: 41%;
 	}
 
 	60%{
-    transition: 1.5s ease-in-out;
     margin-left: -60%;
 	}
 
 	70%{
-    transition: 2.9s ease-in-out;
     margin-left: 32%;
 	}
 
 	80%{
-    transition: 1.9s ease-in-out;
     margin-left: -23%;
 	}
   	90%{
-      transition: 1.9s ease-in-out;
+      transition: cubic-bezier(1.000, -0.600, 0.000, 1.650);
       margin-left: 5%;
   	}
 
 	100%{
-    transition: 2.5s ease-in-out;
+    transition: cubic-bezier(1.000, -0.600, 0.000, 1.650);
     margin-left: initiale;
 	}
 }
 
 #img-animate{
-  margin-top: 16vh;
--webkit-transform-origin: 50% 50%;
--moz-transform-origin: 50% 50%;
--ms-transform-origin: 50% 50%;
--o-transform-origin: 50% 50%;
-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 
-
-	-webkit-transform: scale(1.7);
+	-webkit-transform: scale(10.7);
 	-moz-transform: scale(1.7);
 	-ms-transform: scale(1.7);
 	-o-transform: scale(1.7);
-  transform: scale(1.7);
+  transform: scale(1);
 
-display: inline-block;
-height: auto;
-min-width: 80px;
-height: 45vh;
+  display: inline-block;
+  width: initial;
+  min-width: 0px;
+  max-height: 97%;
+  height:auto;
+  margin-top: 1%;
 
--webkit-animation:  drag 4s ease-in-out 2s 1 normal both;
--moz-animation:  drag 4s ease-in-out 2s 1 normal both;
--ms-animation:  drag 4s ease-in-out 2s 1 normal both;
--o-animation:  drag 4s ease-in-out 2s 1 normal both;
-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -webkit-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -moz-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -ms-animation:  drag 4s ease-in-out 2s 1 normal both;
+  -o-animation:  drag 4s ease-in-out 2s 1 normal both;
+  animation:  drag 4s ease-in-out 2s 1 normal both;
 
 }
 
@@ -274,7 +353,7 @@ animation:  drag 4s ease-in-out 2s 1 normal both;
 
 .video-container{
   position: relative;
-  height: 100vh;
+  height: 101vh;
   width: 100%;
   overflow: hidden;
   max-width: 100%;
